@@ -7,6 +7,7 @@ use InvalidArgumentException;
 
 describe('BlogId', function () {
     it('正常なUUID v4でBlogIdを作成できる', function () {
+        // Arrange
         $validUuid = '550e8400-e29b-41d4-a716-446655440000';
         $blogId = new BlogId($validUuid);
         
