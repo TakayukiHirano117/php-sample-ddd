@@ -2,7 +2,9 @@
     "name": "takayukihirano117/php",
     "autoload": {
         "psr-4": {
-            "Takayukihirano117\\Php\\": "src/"
+            "Takayukihirano117\\Php\\": "src/",
+            "Tests\\": "tests/",
+            "Domain\\": "src/domain/"
         }
     },
     "authors": [
@@ -19,5 +21,9 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true
         }
+    },
+    "require": {
+        "ramsey/uuid": "^4.9",
+        "sebastian/comparator": "^6.3"
     }
 }
