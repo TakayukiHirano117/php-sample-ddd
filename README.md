@@ -1,4 +1,5 @@
 # Blogアプリを作成する
+
 - ユーザーはblogを作成できる
 - ログインしていないとblogを作成・更新・削除できない。
 - ユーザーは自分のblogしか更新・削除できない。
@@ -7,55 +8,59 @@
 - BookIdはUuidなので36桁
 - id, title, body, commentもつけたい
 
+- title
 
-----  アプリケーションロジック ----
+  - 1文字以上
+  - 100文字以内
+
+- body
+  - １文字以上
+  - 10000文字以上
+
+---- アプリケーションロジック ----
 
 # handler
+
 middlewareでログインチェック
 func login?() -> bool
- 
+
 # usecase
 
 # ここで組み立てて使う
- 
+
 # query_service
- 
-----  ドメインロジック ----
- 
+
+---- ドメインロジック ----
+
 # domain
 
-  # model
+# model
 
     # blog
     # user
 
       # バリデーションの中で
- 
- 
-  # domain_service
+
+# domain_service
 
     func can_i_delete_the_interview? -> bool
 
     func can_i_edit_the_interview? -> bool
- 
+
 # repository
 
-  func insert_interview()
+func insert_interview()
 
-  func delete_interview()
+func delete_interview()
 
-  func update_interview()
- 
- 
-----  技術ロジック ----
+func update_interview()
+
+---- 技術ロジック ----
 
 # infrastructure
- 
- 
 
 要件をまとめてる時
- 
- 
+
 #LEAFのblog登録機能
 
 - blog登録
@@ -65,7 +70,7 @@ func login?() -> bool
 - blog編集
 
 - blog一覧
- 
+
 # usecase
 
 - blog登録
@@ -73,30 +78,30 @@ func login?() -> bool
 - ログインチェック → middleware or handler
 
 - blog登録 → infrastructure
- 
+
 - blog削除
 
 - ログインチェック → 上に同じ
 
-- ログインユーザー(blog登録者)のblogかチェック → domain_service 
+- ログインユーザー(blog登録者)のblogかチェック → domain_service
 
 - blog削除 → infrastructure
- 
+
 - blog編集
 
 - ログインチェック
 
 - ログインユーザーの編集可能であるかチェック → domain_service
 
-   - 編集権限がある or blogの作成者
+  - 編集権限がある or blogの作成者
 
 - blog更新 → infrastructure
- 
+
 - blog一覧
 
 # domain
 
-  # model
+# model
 
     - blog
 
@@ -111,12 +116,9 @@ func login?() -> bool
       - id
 
       - name
- 
+
 # repository
 
     - interview_repository
- 
-  # domain service
- 
- 
- 
+
+# domain service

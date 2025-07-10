@@ -7,7 +7,7 @@ use InvalidArgumentException;
 
 final class BlogId extends ValueObject
 {
-    const MAX_LENGTH = 36;
+    const LENGTH = 36;
 
     public function __construct(string $value)
     {
@@ -25,8 +25,8 @@ final class BlogId extends ValueObject
             throw new InvalidArgumentException('BlogIdは空ではいけません');
         }
 
-        if ($this->isTooLong($value)) {
-            throw new InvalidArgumentException('BlogIdは36文字以内である必要があります');
+        if ($this->isLengthInvalid($value)) {
+            throw new InvalidArgumentException('BlogIdは36文字である必要があります');
         }
 
         if (!$this->isUuidV4($value)) {
@@ -44,8 +44,8 @@ final class BlogId extends ValueObject
         return trim($value) === '';
     }
 
-    private function isTooLong(string $value): bool
+    private function isLengthInvalid(string $value): bool
     {
-        return strlen($value) > self::MAX_LENGTH;
+        return strlen($value) !== self::LENGTH;
     }
 }
