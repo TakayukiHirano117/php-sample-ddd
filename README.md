@@ -8,8 +8,6 @@
 - BookIdはUuidなので36桁
 - id, title, body, commentもつけたい
 
-- title
-
   - 1文字以上
   - 100文字以内
 
