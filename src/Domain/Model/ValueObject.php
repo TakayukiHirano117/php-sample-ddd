@@ -4,7 +4,7 @@ namespace Domain\Model;
 
 abstract class ValueObject
 {
-    protected mixed $value;
+    protected readonly mixed $value;
 
     public function __construct(mixed $value)
     {
