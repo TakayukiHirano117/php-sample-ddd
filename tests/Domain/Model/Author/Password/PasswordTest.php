@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Domain\Model\User\Password;
+namespace Tests\Domain\Model\Author\Password;
 
-use Domain\Model\User\Password\Password;
+use Domain\Model\Author\Password\Password;
 use InvalidArgumentException;
 
 describe('Password', function () {

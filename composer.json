@@ -4,7 +4,8 @@
         "psr-4": {
             "Takayukihirano117\\Php\\": "src/",
             "Tests\\": "tests/",
-            "Domain\\": "src/domain/"
+            "Domain\\": "src/domain/",
+            "Infrastructures\\": "src/Infrastructures/"
         }
     },
     "authors": [

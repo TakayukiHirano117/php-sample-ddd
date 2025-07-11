@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Domain\Model\User\Email;
+namespace Tests\Domain\Model\Author\Email;
 
-use Domain\Model\User\Email\Email;
+use Domain\Model\Author\Email\Email;
 use InvalidArgumentException;
 
 describe('Email', function () {

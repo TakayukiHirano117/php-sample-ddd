@@ -1,6 +1,6 @@
 <?php
 
-namespace Domain\Model\User\Password;
+namespace Domain\Model\Author\Password;
 
 use Domain\Model\ValueObject;
 use InvalidArgumentException;

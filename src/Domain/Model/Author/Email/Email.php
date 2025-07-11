@@ -1,6 +1,6 @@
 <?php
 
-namespace Domain\Model\User\Email;
+namespace Domain\Model\Author\Email;
 
 use Domain\Model\ValueObject;
 use InvalidArgumentException;

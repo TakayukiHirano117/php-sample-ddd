@@ -1,11 +1,11 @@
 <?php
 
-namespace Domain\Model\User\UserId;
+namespace Domain\Model\Author\AuthorId;
 
 use Domain\Model\ValueObject;
 use InvalidArgumentException;
 
-final class UserId extends ValueObject
+final class AuthorId extends ValueObject
 {
     const LENGTH = 36;
 
@@ -17,19 +17,19 @@ final class UserId extends ValueObject
     protected function validate(mixed $value): void
     {
         if (!is_string($value)) {
-            throw new InvalidArgumentException('UserIdは文字列でなくてはいけません');
+            throw new InvalidArgumentException('AuthorIdは文字列でなくてはいけません');
         }
 
         if ($this->isEmpty($value)) {
-            throw new InvalidArgumentException('UserIdは空ではいけません');
+            throw new InvalidArgumentException('AuthorIdは空ではいけません');
         }
 
         if ($this->isLengthInvalid($value)) {
-            throw new InvalidArgumentException('UserIdは36文字である必要があります');
+            throw new InvalidArgumentException('AuthorIdは36文字である必要があります');
         }
 
         if (!$this->isUuidV4($value)) {
-            throw new InvalidArgumentException('UserIdはUUIDでなくてはいけません');
+            throw new InvalidArgumentException('AuthorIdはUUIDでなくてはいけません');
         }
     }
 

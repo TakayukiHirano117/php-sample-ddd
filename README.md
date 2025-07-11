@@ -6,6 +6,7 @@
 - ユーザーはログインしていなくてもblogを見ることができる。
 - ユーザーは他のユーザーのblogも見ることができる。
 - BookIdはUuidなので36桁
+- UserIdはUuidなので36桁
 - id, title, body, commentもつけたい
 
   - 1文字以上
