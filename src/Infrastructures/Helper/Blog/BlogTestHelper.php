@@ -1,6 +1,6 @@
 <?php
 
-namespace Infrastructures\Shared\Blog;
+namespace Infrastructures\Helper\Blog;
 
 use Domain\Repositories\Blog\IBlogRepository;
 use Domain\Model\Blog\Blog;
