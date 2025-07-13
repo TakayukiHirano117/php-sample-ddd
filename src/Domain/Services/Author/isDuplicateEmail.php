@@ -2,8 +2,8 @@
 
 namespace Domain\Services\Author;
 
-use Domain\Model\Author\IAuthorRepository;
 use Domain\Model\Author\Email\Email;
+use Domain\Repositories\Author\IAuthorRepository;
 
 class isDuplicateEmail
 {

@@ -3,13 +3,13 @@
 namespace Infrastructures\Repositories;
 
 use Domain\Model\Author\Author;
-use Domain\Model\Author\IAuthorRepository;
 use Domain\Model\Author\AuthorId\AuthorId;
 use Domain\Model\Author\AuthorName\AuthorName;
 use Domain\Model\Author\Email\Email;
 use Domain\Model\Author\Password\Password;
 use Doctrine\DBAL\Connection;
 use Config\DbConnection;
+use Domain\Repositories\Author\IAuthorRepository;
 
 class AuthorRepository implements IAuthorRepository
 {

@@ -2,7 +2,6 @@
 
 namespace Infrastructures\Repositories;
 
-use Domain\Model\Blog\IBlogRepository;
 use Domain\Model\Blog\Blog;
 use Domain\Model\Blog\BlogId\BlogId;
 use Domain\Model\Blog\Title\Title;
@@ -10,6 +9,7 @@ use Domain\Model\Blog\Body\Body;
 use Domain\Model\Author\AuthorId\AuthorId;
 use Doctrine\DBAL\Connection;
 use Config\DbConnection;
+use Domain\Repositories\Blog\IBlogRepository;
 
 class BlogRepository implements IBlogRepository
 {

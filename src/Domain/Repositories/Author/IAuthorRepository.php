@@ -1,7 +1,8 @@
 <?php
 
-namespace Domain\Model\Author;
+namespace Domain\Repositories\Author;
 
+use Domain\Model\Author\Author;
 use Domain\Model\Author\AuthorId\AuthorId;
 use Domain\Model\Author\Email\Email;
 

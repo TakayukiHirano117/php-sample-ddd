@@ -1,6 +1,6 @@
 <?php
 
-namespace Domain\Model\Blog;
+namespace Domain\Repositories\Blog;
 
 use Domain\Model\Blog\Blog;
 use Domain\Model\Blog\BlogId\BlogId;

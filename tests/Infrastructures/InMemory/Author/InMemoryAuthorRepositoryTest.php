@@ -7,8 +7,8 @@ use Domain\Model\Author\AuthorId\AuthorId;
 use Domain\Model\Author\AuthorName\AuthorName;
 use Domain\Model\Author\Password\Password;
 use Domain\Model\Author\Email\Email;
-use Infrastructures\InMemory\Author\InMemoryAuthorRepository;
 use Exception;
+use Infrastructures\InMemory\Author\InMemoryAuthorRepository;
 
 describe('InMemoryAuthorRepository', function () {
   beforeEach(function () {

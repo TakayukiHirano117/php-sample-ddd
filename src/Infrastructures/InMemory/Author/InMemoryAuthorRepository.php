@@ -3,9 +3,9 @@
 namespace Infrastructures\InMemory\Author;
 
 use Domain\Model\Author\Author;
-use Domain\Model\Author\IAuthorRepository;
 use Domain\Model\Author\AuthorId\AuthorId;
 use Domain\Model\Author\Email\Email;
+use Domain\Repositories\Author\IAuthorRepository;
 
 class InMemoryAuthorRepository implements IAuthorRepository
 {
