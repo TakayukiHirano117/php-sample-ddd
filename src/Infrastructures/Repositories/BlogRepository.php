@@ -8,17 +8,11 @@ use Domain\Model\Blog\Title\Title;
 use Domain\Model\Blog\Body\Body;
 use Domain\Model\Author\AuthorId\AuthorId;
 use Doctrine\DBAL\Connection;
-use Config\DbConnection;
 use Domain\Repositories\Blog\IBlogRepository;
 
 class BlogRepository implements IBlogRepository
 {
-  private Connection $connection;
-
-  public function __construct()
-  {
-    $this->connection = DbConnection::getConnection();
-  }
+  public function __construct(private Connection $connection) {}
 
   public function save(Blog $blog): void
   {

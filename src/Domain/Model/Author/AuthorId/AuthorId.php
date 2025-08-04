@@ -4,47 +4,54 @@ namespace Domain\Model\Author\AuthorId;
 
 use Domain\Model\ValueObject;
 use InvalidArgumentException;
+use Ramsey\Uuid\Uuid;
 
+// newしたときにUuidになるからvoディレクトリにuuid.phpを作った方が良さそう。
 final class AuthorId extends ValueObject
 {
-    const LENGTH = 36;
+    // const LENGTH = 36;
 
-    public function __construct(string $value)
+    public function __construct(string $value = null)
     {
-        parent::__construct($value);
+        parent::__construct(Uuid::uuid4());
+    }
+
+    public static function reconstruct(string $value): AuthorId
+    {
+        return new AuthorId($value);
     }
 
     protected function validate(mixed $value): void
     {
-        if (!is_string($value)) {
-            throw new InvalidArgumentException('AuthorIdは文字列でなくてはいけません');
-        }
+        // if (!is_string($value)) {
+        //     throw new InvalidArgumentException('AuthorIdは文字列でなくてはいけません');
+        // }
 
-        if ($this->isEmpty($value)) {
-            throw new InvalidArgumentException('AuthorIdは空ではいけません');
-        }
+        // if ($this->isEmpty($value)) {
+        //     throw new InvalidArgumentException('AuthorIdは空ではいけません');
+        // }
 
-        if ($this->isLengthInvalid($value)) {
-            throw new InvalidArgumentException('AuthorIdは36文字である必要があります');
-        }
+        // if ($this->isLengthInvalid($value)) {
+        //     throw new InvalidArgumentException('AuthorIdは36文字である必要があります');
+        // }
 
-        if (!$this->isUuidV4($value)) {
-            throw new InvalidArgumentException('AuthorIdはUUIDでなくてはいけません');
-        }
+        // if (!$this->isUuidV4($value)) {
+        //     throw new InvalidArgumentException('AuthorIdはUUIDでなくてはいけません');
+        // }
     }
 
-    private function isUuidV4(string $value): bool
-    {
-        return preg_match('/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i', $value) === 1;
-    }
+    // private function isUuidV4(string $value): bool
+    // {
+    //     return preg_match('/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i', $value) === 1;
+    // }
 
-    private function isEmpty(string $value): bool
-    {
-        return trim($value) === '';
-    }
+    // private function isEmpty(string $value): bool
+    // {
+    //     return trim($value) === '';
+    // }
 
-    private function isLengthInvalid(string $value): bool
-    {
-        return strlen($value) !== self::LENGTH;
-    }
+    // private function isLengthInvalid(string $value): bool
+    // {
+    //     return strlen($value) !== self::LENGTH;
+    // }
 }
