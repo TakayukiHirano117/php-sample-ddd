@@ -12,7 +12,7 @@ final class Password extends ValueObject
 
   public function __construct(string $value)
   {
-    parent::__construct($value);
+    parent::__construct(password_hash($value, PASSWORD_DEFAULT));
   }
 
   protected function validate(mixed $value): void

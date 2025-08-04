@@ -11,9 +11,9 @@ use InvalidArgumentException;
 class Author
 {
   private readonly AuthorId $authorId;
-  private AuthorName $authorName;
-  private Email $email;
-  private Password $password;
+  private readonly AuthorName $authorName;
+  private readonly Email $email;
+  private readonly Password $password;
 
   private function __construct(AuthorId $authorId, AuthorName $authorName, Email $email, Password $password)
   {
